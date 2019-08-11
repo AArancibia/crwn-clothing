@@ -1,15 +1,19 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./menu-item.styles.scss";
 // import { connect } from "react-redux";
 // import { bindActionCreators } from "redux";
 // import * as menuItemActions from "../../store/menuItem/actions";
-const MenuItem = ({ title, imageUrl, size }) => {
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
   // constructor(props) {
   //     super(props);
   //     this.state = {};
   // }
   return (
-    <div className={`menu-item ${size}`}>
+    <div
+      className={`menu-item ${size}`}
+      onClick={() => history.push(`${match.url}${linkUrl}`)}
+    >
       <div
         className="background-image"
         style={{
@@ -28,4 +32,4 @@ const MenuItem = ({ title, imageUrl, size }) => {
 //     dispatch => bindActionCreators({ ...menuItemActions }, dispatch)
 //   )( menuItem );
 
-export default MenuItem;
+export default withRouter(MenuItem);
