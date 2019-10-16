@@ -19,7 +19,6 @@ const CollectionPage = ({ collection }) => {
           <CollectionItem key={item.id} item={item} />
         ))}
       </div>
-      {/* <CollectionPreview title={title} items={items}></CollectionPreview> */}
     </div>
   );
 };
