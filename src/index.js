@@ -11,7 +11,7 @@ import App from "./App";
 import { store, persistor } from "./redux/store";
 
 dotenv.config({
-  path: "../production.env"
+  path: "./production.env"
 });
 
 ReactDOM.render(
