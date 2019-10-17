@@ -4,9 +4,10 @@ import logger from "redux-logger";
 
 import rootReducer from "./root-reducer";
 
+const environment = process.env.REACT_APP_NODE_ENV || "development";
 const middlewares = [];
 
-if (process.env.NODE_ENV === "development") {
+if (environment === "development") {
   middlewares.push(logger);
 }
 

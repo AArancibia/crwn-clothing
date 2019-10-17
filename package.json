@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dotenv": "^8.2.0",
     "firebase": "^6.3.5",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
@@ -17,8 +18,8 @@
     "reselect": "^4.0.0"
   },
   "scripts": {
-    "start": "set NODE_ENV=production&& react-scripts start",
-    "build": "react-scripts build && set NODE_ENV=production",
+    "start": "set REACT_APP_NODE_ENV=production&& react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
