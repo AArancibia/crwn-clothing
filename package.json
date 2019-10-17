@@ -18,8 +18,8 @@
     "reselect": "^4.0.0"
   },
   "scripts": {
-    "start": "set REACT_APP_NODE_ENV=production&& react-scripts start",
-    "build": "react-scripts build && set REACT_APP_NODE_ENV=production",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

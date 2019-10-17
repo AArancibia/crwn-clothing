@@ -10,9 +10,9 @@ import App from "./App";
 
 import { store, persistor } from "./redux/store";
 
-dotenv.config({
-  path: "./production.env"
-});
+// dotenv.config({
+//   path: "../production.env"
+// });
 
 ReactDOM.render(
   <Provider store={store}>
