@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "set NODE_ENV=production&& react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && set NODE_ENV=production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
