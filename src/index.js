@@ -1,4 +1,3 @@
-import * as dotenv from "dotenv";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
@@ -9,10 +8,6 @@ import "./index.css";
 import App from "./App";
 
 import { store, persistor } from "./redux/store";
-
-// dotenv.config({
-//   path: "../production.env"
-// });
 
 ReactDOM.render(
   <Provider store={store}>

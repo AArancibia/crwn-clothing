@@ -1,14 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { createSelectorCreator } from "reselect";
-
 import {
   clearItemFromCart,
   addItem,
   removeItem
 } from "../../redux/cart/car-actions";
-import { selectCartItems } from "../../redux/cart/cart.selectors";
 
 import "./checkout-item.styles.scss";
 
