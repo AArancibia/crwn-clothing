@@ -22,7 +22,6 @@ import CheckOutPage from "./pages/checkout/checkout.component";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
-
   componentDidMount() {
     const { checkUserSession } = this.props;
     checkUserSession();
@@ -81,7 +80,4 @@ const mapDispatchToProps = dispatch => ({
 });
 
 // there is not matchprops = null
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
