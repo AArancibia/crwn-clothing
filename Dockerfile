@@ -1,12 +1,13 @@
-FROM node:10.16.3-alpine
+FROM node:alpine as builder
 
-# Create a work directory and copy over our dependency manifest files.
 WORKDIR '/app'
 
-COPY package.json .
+COPY package*.json ./
 RUN npm install
-
 COPY . .
+RUN npm run build
 
-# Expose PORT 3000 on our virtual machine so we can run our server
-##EXPOSE 6000
+## /app/build --> all the stuff
+
+FROM nginx
+COPY --from=builder /app/build /usr/share/nginx/html
